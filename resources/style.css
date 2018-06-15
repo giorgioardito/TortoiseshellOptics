@@ -52,6 +52,10 @@ header a {
   margin-right: 18rem;
   float: right;
 }
+.mobile-banner {
+  display: none;
+}
+
 h1 {
   font-size: 2rem;
   font-weight: bold;
@@ -101,18 +105,19 @@ h2.title {
   text-transform: uppercase;
 }
 footer {
-  width: 960px;
   background-color: azure;
   padding: 4rem 2rem;
   display: flex;
   align-items: center;
 }
 footer img {
-  height 1.5rem;
+  height: 1.5rem;
   margin-left: 2rem;
   margin-right: 1rem;
 }
-
+.mobile-menu {
+  display: none;
+}
 @media only screen and (max-width: 1024px) {
   .main-banner {
     margin-right: 5rem;
@@ -130,9 +135,49 @@ footer img {
   }
   nav {
     padding: 0;
-    width: 960px;
   }
   .info {
     width: 30%;
   }
+}
+
+@media only screen and (max-width: 470px) {
+
+  .logo span {
+    display: none;
+  }
+  .mobile-menu {
+    display: inline;
+  }
+  .menu {
+    display:none;
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-banner {
+    display: none;
+  }
+  header {
+    height: 10rem;
+  }
+  .mobile-banner {
+    display: flex;
+    align-items: center;
+  }
+  .mobile-banner h1 {
+    font-size: 1rem;
+  }
+  .philosophy-appointments.container {
+    display: flex;
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 0.5rem;
+  }
+  .copyright {
+    display: none;
+  }
+
 }
